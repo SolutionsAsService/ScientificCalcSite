@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Functions · Show Your Work calculator</title>
+  <meta name="description" content="Every function the Show Your Work calculator understands, with worked examples: powers, roots, logs, trigonometry in degrees and radians, combinations and rounding." />
+  <meta name="theme-color" content="#262624" />
+  <meta property="og:title" content="Functions · Show Your Work calculator" />
+  <meta property="og:description" content="Every function the Show Your Work calculator understands, with worked examples: powers, roots, logs, trigonometry in degrees and radians, combinations and rounding." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Show Your Work calculator, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="1.5" width="26" height="29" rx="6" fill="#262624"/><rect x="7" y="5.5" width="18" height="7" rx="1.5" fill="#141513"/><circle cx="11" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="16" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="21" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="11" cy="24.5" r="2.4" fill="#F2EFE8"/><circle cx="16" cy="24.5" r="2.4" fill="#F2EFE8"/><circle cx="21" cy="24.5" r="2.4" fill="#F2B705"/></svg>
+        <span>Show Your Work<small>scientific calculator</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Calculator</a>
+        <a href="functions.html" aria-current="page">Functions</a>
+        <a href="constants.html">Constants</a>
+        <a href="guide.html">How it reads</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="kicker">Reference</p>
+        <h1>Functions</h1>
+        <p class="lede">21 entries. Every example below was computed by this calculator's own engine when the page was built; tap one to try it.</p>
+      </div>
+    </section>
+    <section class="page-body">
+      <div class="wrap">
+<section class="ref-group"><h2>Arithmetic</h2><div class="ref-list">
+<article class="ref"><h3><code>+  −  ×  ÷</code></h3><p>Add, subtract, multiply, divide. × and ÷ come before + and −.</p><ul class="examples"><li><a class="ex" href="index.html?x=1%2B2%2A3"><code class="ex-in">1+2*3</code><span class="ex-read">1 + <mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>2 × 3<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark></span><span class="ex-out">= 7</span></a></li><li><a class="ex" href="index.html?x=10%2F4"><code class="ex-in">10/4</code><span class="ex-read">10 ÷ 4</span><span class="ex-out">= 2.5</span></a></li></ul></article>
+<article class="ref"><h3><code>x^y</code></h3><p>Power. Right to left, so 2^3^2 is 2^(3^2). It comes before a leading minus.</p><ul class="examples"><li><a class="ex" href="index.html?x=2%5E10"><code class="ex-in">2^10</code><span class="ex-read">2^10</span><span class="ex-out">= 1024</span></a></li><li><a class="ex" href="index.html?x=2%5E3%5E2"><code class="ex-in">2^3^2</code><span class="ex-read">2^<mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>3^2<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark></span><span class="ex-out">= 512</span></a></li><li><a class="ex" href="index.html?x=-2%5E2"><code class="ex-in">-2^2</code><span class="ex-read">−<mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>2^2<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark></span><span class="ex-out">= −4</span></a></li></ul></article>
+<article class="ref"><h3><code>n!</code></h3><p>Factorial of a whole number from 0 to 170.</p><ul class="examples"><li><a class="ex" href="index.html?x=5%21"><code class="ex-in">5!</code><span class="ex-read">5!</span><span class="ex-out">= 120</span></a></li><li><a class="ex" href="index.html?x=0%21"><code class="ex-in">0!</code><span class="ex-read">0!</span><span class="ex-out">= 1</span></a></li></ul></article>
+<article class="ref"><h3><code>x%</code></h3><p>Percent: divides by 100.</p><ul class="examples"><li><a class="ex" href="index.html?x=200%2A15%25"><code class="ex-in">200*15%</code><span class="ex-read">200 × <mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>15%<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark></span><span class="ex-out">= 30</span></a></li></ul></article>
+<article class="ref"><h3><code>( )</code></h3><p>Brackets. A number next to a bracket, a constant or a root multiplies.</p><ul class="examples"><li><a class="ex" href="index.html?x=2%283%2B4%29"><code class="ex-in">2(3+4)</code><span class="ex-read">2<mark class="seam"><span class="sr-only">(added times) </span><span aria-hidden="true"> × </span></mark>(3 + 4)</span><span class="ex-out">= 14</span></a></li><li><a class="ex" href="index.html?x=2pi"><code class="ex-in">2pi</code><span class="ex-read">2<mark class="seam"><span class="sr-only">(added times) </span><span aria-hidden="true"> × </span></mark>π</span><span class="ex-out">= 6.28318530718</span></a></li></ul></article>
+</div></section>
+<section class="ref-group"><h2>Roots, powers and logs</h2><div class="ref-list">
+<article class="ref"><h3><code>√x  sqrt(x)</code></h3><p>Square root.</p><ul class="examples"><li><a class="ex" href="index.html?x=%E2%88%9A16"><code class="ex-in">√16</code><span class="ex-read">√<mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>16<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark></span><span class="ex-out">= 4</span></a></li><li><a class="ex" href="index.html?x=sqrt%282%29"><code class="ex-in">sqrt(2)</code><span class="ex-read">√(2)</span><span class="ex-out">= 1.41421356237</span></a></li></ul></article>
+<article class="ref"><h3><code>∛x  cbrt(x)</code></h3><p>Cube root; works for negative numbers.</p><ul class="examples"><li><a class="ex" href="index.html?x=%E2%88%9B27"><code class="ex-in">∛27</code><span class="ex-read">∛<mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>27<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark></span><span class="ex-out">= 3</span></a></li><li><a class="ex" href="index.html?x=cbrt%28-8%29"><code class="ex-in">cbrt(-8)</code><span class="ex-read">∛(−8)</span><span class="ex-out">= −2</span></a></li></ul></article>
+<article class="ref"><h3><code>root(x, n)</code></h3><p>The n-th root.</p><ul class="examples"><li><a class="ex" href="index.html?x=root%2881%2C4%29"><code class="ex-in">root(81,4)</code><span class="ex-read">root(81, 4)</span><span class="ex-out">= 3</span></a></li><li><a class="ex" href="index.html?x=root%28-32%2C5%29"><code class="ex-in">root(-32,5)</code><span class="ex-read">root(−32, 5)</span><span class="ex-out">= −2</span></a></li></ul></article>
+<article class="ref"><h3><code>exp(x)</code></h3><p>e to the power x.</p><ul class="examples"><li><a class="ex" href="index.html?x=exp%281%29"><code class="ex-in">exp(1)</code><span class="ex-read">exp(1)</span><span class="ex-out">= 2.71828182846</span></a></li></ul></article>
+<article class="ref"><h3><code>ln(x)</code></h3><p>Natural log, base e.</p><ul class="examples"><li><a class="ex" href="index.html?x=ln%28e%29"><code class="ex-in">ln(e)</code><span class="ex-read">ln(e)</span><span class="ex-out">= 1</span></a></li><li><a class="ex" href="index.html?x=ln%2810%29"><code class="ex-in">ln(10)</code><span class="ex-read">ln(10)</span><span class="ex-out">= 2.30258509299</span></a></li></ul></article>
+<article class="ref"><h3><code>log(x)  log(x, b)</code></h3><p>Log base 10, or base b.</p><ul class="examples"><li><a class="ex" href="index.html?x=log%281000%29"><code class="ex-in">log(1000)</code><span class="ex-read">log(1000)</span><span class="ex-out">= 3</span></a></li><li><a class="ex" href="index.html?x=log%288%2C2%29"><code class="ex-in">log(8,2)</code><span class="ex-read">log(8, 2)</span><span class="ex-out">= 3</span></a></li></ul></article>
+<article class="ref"><h3><code>log2(x)</code></h3><p>Log base 2.</p><ul class="examples"><li><a class="ex" href="index.html?x=log2%281024%29"><code class="ex-in">log2(1024)</code><span class="ex-read">log2(1024)</span><span class="ex-out">= 10</span></a></li></ul></article>
+</div></section>
+<section class="ref-group"><h2>Trigonometry</h2><div class="ref-list">
+<article class="ref"><h3><code>sin  cos  tan</code></h3><p>In degrees unless you switch to RAD.</p><ul class="examples"><li><a class="ex" href="index.html?x=sin%2830%29"><code class="ex-in">sin(30)</code><span class="ex-read">sin(30<mark class="seam"><span class="sr-only">(added degrees) </span><span aria-hidden="true">°</span></mark>)</span><span class="ex-out">= 0.5</span></a></li><li><a class="ex" href="index.html?x=cos%2860%29"><code class="ex-in">cos(60)</code><span class="ex-read">cos(60<mark class="seam"><span class="sr-only">(added degrees) </span><span aria-hidden="true">°</span></mark>)</span><span class="ex-out">= 0.5</span></a></li><li><a class="ex" href="index.html?x=tan%2845%29"><code class="ex-in">tan(45)</code><span class="ex-read">tan(45<mark class="seam"><span class="sr-only">(added degrees) </span><span aria-hidden="true">°</span></mark>)</span><span class="ex-out">= 1</span></a></li></ul></article>
+<article class="ref"><h3><code>sin  cos  tan (RAD)</code></h3><p>In radians: the same keys after switching to RAD.</p><ul class="examples"><li><a class="ex" href="index.html?x=sin%28pi%2F6%29&mode=rad"><code class="ex-in">sin(pi/6)</code><span class="mode-tag">RAD</span><span class="ex-read">sin(π ÷ 6<mark class="seam"><span class="sr-only">(added radians) </span><span aria-hidden="true"> rad</span></mark>)</span><span class="ex-out">= 0.5</span></a></li><li><a class="ex" href="index.html?x=cos%28pi%29&mode=rad"><code class="ex-in">cos(pi)</code><span class="mode-tag">RAD</span><span class="ex-read">cos(π<mark class="seam"><span class="sr-only">(added radians) </span><span aria-hidden="true"> rad</span></mark>)</span><span class="ex-out">= −1</span></a></li></ul></article>
+<article class="ref"><h3><code>asin  acos  atan</code></h3><p>Inverse trig; answers in the current angle unit.</p><ul class="examples"><li><a class="ex" href="index.html?x=asin%280.5%29"><code class="ex-in">asin(0.5)</code><span class="ex-read">asin(0.5)</span><span class="ex-out">= 30</span></a></li><li><a class="ex" href="index.html?x=atan%281%29"><code class="ex-in">atan(1)</code><span class="ex-read">atan(1)</span><span class="ex-out">= 45</span></a></li></ul></article>
+<article class="ref"><h3><code>sinh  cosh  tanh  asinh  acosh  atanh</code></h3><p>Hyperbolic functions and their inverses (no angle unit).</p><ul class="examples"><li><a class="ex" href="index.html?x=sinh%281%29"><code class="ex-in">sinh(1)</code><span class="ex-read">sinh(1)</span><span class="ex-out">= 1.17520119364</span></a></li><li><a class="ex" href="index.html?x=tanh%280.5%29"><code class="ex-in">tanh(0.5)</code><span class="ex-read">tanh(0.5)</span><span class="ex-out">= 0.46211715726</span></a></li><li><a class="ex" href="index.html?x=asinh%281%29"><code class="ex-in">asinh(1)</code><span class="ex-read">asinh(1)</span><span class="ex-out">= 0.88137358702</span></a></li></ul></article>
+</div></section>
+<section class="ref-group"><h2>Counting and rounding</h2><div class="ref-list">
+<article class="ref"><h3><code>nCr(n, r)</code></h3><p>Combinations: ways to choose r from n. Above 2⁵³ (about 9 × 10¹⁵) results are floating-point approximations.</p><ul class="examples"><li><a class="ex" href="index.html?x=nCr%2852%2C5%29"><code class="ex-in">nCr(52,5)</code><span class="ex-read">nCr(52, 5)</span><span class="ex-out">= 2598960</span></a></li></ul></article>
+<article class="ref"><h3><code>nPr(n, r)</code></h3><p>Permutations: ordered choices of r from n.</p><ul class="examples"><li><a class="ex" href="index.html?x=nPr%285%2C2%29"><code class="ex-in">nPr(5,2)</code><span class="ex-read">nPr(5, 2)</span><span class="ex-out">= 20</span></a></li></ul></article>
+<article class="ref"><h3><code>mod(a, b)</code></h3><p>Remainder, always 0 or positive for positive b.</p><ul class="examples"><li><a class="ex" href="index.html?x=mod%28-7%2C3%29"><code class="ex-in">mod(-7,3)</code><span class="ex-read">mod(−7, 3)</span><span class="ex-out">= 2</span></a></li></ul></article>
+<article class="ref"><h3><code>abs  sign  floor  ceil  round</code></h3><p>Absolute value, sign, and rounding. round sends halves away from zero.</p><ul class="examples"><li><a class="ex" href="index.html?x=abs%28-3.5%29"><code class="ex-in">abs(-3.5)</code><span class="ex-read">abs(−3.5)</span><span class="ex-out">= 3.5</span></a></li><li><a class="ex" href="index.html?x=floor%282.7%29"><code class="ex-in">floor(2.7)</code><span class="ex-read">floor(2.7)</span><span class="ex-out">= 2</span></a></li><li><a class="ex" href="index.html?x=round%282.5%29"><code class="ex-in">round(2.5)</code><span class="ex-read">round(2.5)</span><span class="ex-out">= 3</span></a></li><li><a class="ex" href="index.html?x=round%28-2.5%29"><code class="ex-in">round(-2.5)</code><span class="ex-read">round(−2.5)</span><span class="ex-out">= −3</span></a></li></ul></article>
+<article class="ref"><h3><code>min  max  hypot</code></h3><p>Smallest, largest, and √(a² + b² + …).</p><ul class="examples"><li><a class="ex" href="index.html?x=max%281%2C9%2C4%29"><code class="ex-in">max(1,9,4)</code><span class="ex-read">max(1, 9, 4)</span><span class="ex-out">= 9</span></a></li><li><a class="ex" href="index.html?x=hypot%283%2C4%29"><code class="ex-in">hypot(3,4)</code><span class="ex-read">hypot(3, 4)</span><span class="ex-out">= 5</span></a></li></ul></article>
+</div></section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Show Your Work</strong> · a scientific calculator that tells you how it read your maths. Answers are IEEE-754 doubles shown to 12 significant figures; the exact double is always one tap away.</p>
+      <p>Runs entirely in your browser; nothing you type leaves it. <a href="https://github.com/SolutionsAsService/ScientificCalcSite">Source and tests on GitHub</a> · MIT licensed.</p>
+    </div>
+  </footer>
+  <script src="js/calc.js"></script>
+  <script src="js/ui.js" defer></script>
+</body>
+</html>

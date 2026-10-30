@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How it reads your maths · Show Your Work calculator</title>
+  <meta name="description" content="The order of operations, angle units and rounding rules the Show Your Work calculator uses, each with a worked example and how the calculator reads it." />
+  <meta name="theme-color" content="#262624" />
+  <meta property="og:title" content="How it reads your maths · Show Your Work calculator" />
+  <meta property="og:description" content="The order of operations, angle units and rounding rules the Show Your Work calculator uses, each with a worked example and how the calculator reads it." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Show Your Work calculator, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="1.5" width="26" height="29" rx="6" fill="#262624"/><rect x="7" y="5.5" width="18" height="7" rx="1.5" fill="#141513"/><circle cx="11" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="16" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="21" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="11" cy="24.5" r="2.4" fill="#F2EFE8"/><circle cx="16" cy="24.5" r="2.4" fill="#F2EFE8"/><circle cx="21" cy="24.5" r="2.4" fill="#F2B705"/></svg>
+        <span>Show Your Work<small>scientific calculator</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Calculator</a>
+        <a href="functions.html">Functions</a>
+        <a href="constants.html">Constants</a>
+        <a href="guide.html" aria-current="page">How it reads</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="kicker">Guide</p>
+        <h1>How it reads your maths</h1>
+        <p class="lede">Calculators disagree about <code>-2^2</code> and <code>6/2(1+2)</code>. This one shows you its reading every time. Here are its rules, each with the reading and answer the calculator gave when this page was built. Characters the calculator added are marked; where another common reading gives a different number, it is shown too.</p>
+      </div>
+    </section>
+    <section class="page-body">
+      <div class="wrap">
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Worked examples">
+          <table class="data">
+            <thead><tr><th scope="col">You type</th><th scope="col">Read as</th><th scope="col">Answer</th><th scope="col">Other calculators may read</th><th scope="col">Why</th></tr></thead>
+            <tbody>
+<tr><td><a href="index.html?x=1%2B2%2A3"><code>1+2*3</code></a></td><td><code class="reading">1 + <mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>2 × 3<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark></code></td><td class="num">7</td><td>—</td><td>× comes before +.</td></tr>
+<tr><td><a href="index.html?x=7-3-2"><code>7-3-2</code></a></td><td><code class="reading"><mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>7 − 3<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark> − 2</code></td><td class="num">2</td><td>—</td><td>− and ÷ go left to right.</td></tr>
+<tr><td><a href="index.html?x=2%5E3%5E2"><code>2^3^2</code></a></td><td><code class="reading">2^<mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>3^2<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark></code></td><td class="num">512</td><td>—</td><td>Powers go right to left.</td></tr>
+<tr><td><a href="index.html?x=-2%5E2"><code>-2^2</code></a></td><td><code class="reading">−<mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>2^2<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark></code></td><td class="num">−4</td><td><code class="reading">(−2)^2</code> = 4</td><td>A leading minus waits for the power.</td></tr>
+<tr><td><a href="index.html?x=%28-2%29%5E2"><code>(-2)^2</code></a></td><td><code class="reading">(−2)^2</code></td><td class="num">4</td><td>—</td><td>Brackets put the minus inside.</td></tr>
+<tr><td><a href="index.html?x=6%2F2%281%2B2%29"><code>6/2(1+2)</code></a></td><td><code class="reading"><mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>6 ÷ 2<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark><mark class="seam"><span class="sr-only">(added times) </span><span aria-hidden="true"> × </span></mark>(1 + 2)</code></td><td class="num">9</td><td><code class="reading">6 ÷ (2<mark class="seam"><span class="sr-only">(added times) </span><span aria-hidden="true"> × </span></mark>(1 + 2))</code> = 1</td><td>A number next to a bracket is an ordinary ×, so it goes left to right with ÷.</td></tr>
+<tr><td><a href="index.html?x=2pi"><code>2pi</code></a></td><td><code class="reading">2<mark class="seam"><span class="sr-only">(added times) </span><span aria-hidden="true"> × </span></mark>π</code></td><td class="num">6.28318530718</td><td>—</td><td>A number next to a constant multiplies.</td></tr>
+<tr><td><a href="index.html?x=%E2%88%9A16%2B1"><code>√16+1</code></a></td><td><code class="reading">√<mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>16<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark> + 1</code></td><td class="num">5</td><td>—</td><td>√ takes the number right after it.</td></tr>
+<tr><td><a href="index.html?x=3%21%5E2"><code>3!^2</code></a></td><td><code class="reading"><mark class="seam"><span class="sr-only">(added opening bracket) </span><span aria-hidden="true">(</span></mark>3!<mark class="seam"><span class="sr-only">(added closing bracket) </span><span aria-hidden="true">)</span></mark>^2</code></td><td class="num">36</td><td>—</td><td>! comes before ^.</td></tr>
+<tr><td><a href="index.html?x=sin%2830%29"><code>sin(30)</code></a></td><td><code class="reading">sin(30<mark class="seam"><span class="sr-only">(added degrees) </span><span aria-hidden="true">°</span></mark>)</code></td><td class="num">0.5</td><td>—</td><td>Degrees: the reading shows the ° it assumed.</td></tr>
+<tr><td><a href="index.html?x=sin%2830%29&mode=rad"><code>sin(30)</code></a> <span class="mode-tag">RAD</span></td><td><code class="reading">sin(30<mark class="seam"><span class="sr-only">(added radians) </span><span aria-hidden="true"> rad</span></mark>)</code></td><td class="num">−0.988031624093</td><td>—</td><td>Radians: the same keys, a different answer.</td></tr>
+<tr><td><a href="index.html?x=0.1%2B0.2"><code>0.1+0.2</code></a></td><td><code class="reading">0.1 + 0.2</code></td><td class="num">0.3</td><td>—</td><td>Shown as 0.3; the exact double is 0.30000000000000004.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="rules">
+          <section>
+            <h2>Order of operations</h2>
+            <ol>
+              <li>Brackets, and function calls like <code>sin( )</code></li>
+              <li><code>!</code> and <code>%</code> (after the number)</li>
+              <li><code>√</code> and <code>∛</code> (on the number right after them)</li>
+              <li><code>^</code>, right to left</li>
+              <li>A leading minus</li>
+              <li><code>×</code>, <code>÷</code> and a number next to a bracket or constant, left to right</li>
+              <li><code>+</code> and <code>−</code>, left to right</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Angles</h2>
+            <p>Trigonometry uses degrees until you press DEG to switch to RAD. The screen always shows which. Exact angles give exact answers: <code>sin(180)</code> is 0, and <code>tan(90)</code> is an error, not a huge number.</p>
+          </section>
+          <section>
+            <h2>Numbers and rounding</h2>
+            <p>The calculator works in 64-bit floating point, like JavaScript and most spreadsheets. It shows 12 significant figures and switches to × 10ⁿ from a trillion up and below a millionth (judged after rounding to 12 figures). When the 12 figures round the real value, a ≈ appears and the exact double is printed under the answer.</p>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Show Your Work</strong> · a scientific calculator that tells you how it read your maths. Answers are IEEE-754 doubles shown to 12 significant figures; the exact double is always one tap away.</p>
+      <p>Runs entirely in your browser; nothing you type leaves it. <a href="https://github.com/SolutionsAsService/ScientificCalcSite">Source and tests on GitHub</a> · MIT licensed.</p>
+    </div>
+  </footer>
+  <script src="js/calc.js"></script>
+  <script src="js/ui.js" defer></script>
+</body>
+</html>

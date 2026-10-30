@@ -1,0 +1,335 @@
+{
+  "functions": [
+    {
+      "group": "Arithmetic",
+      "items": [
+        {
+          "name": "+  −  ×  ÷",
+          "what": "Add, subtract, multiply, divide. × and ÷ come before + and −.",
+          "examples": [
+            "1+2*3",
+            "10/4"
+          ]
+        },
+        {
+          "name": "x^y",
+          "what": "Power. Right to left, so 2^3^2 is 2^(3^2). It comes before a leading minus.",
+          "examples": [
+            "2^10",
+            "2^3^2",
+            "-2^2"
+          ]
+        },
+        {
+          "name": "n!",
+          "what": "Factorial of a whole number from 0 to 170.",
+          "examples": [
+            "5!",
+            "0!"
+          ]
+        },
+        {
+          "name": "x%",
+          "what": "Percent: divides by 100.",
+          "examples": [
+            "200*15%"
+          ]
+        },
+        {
+          "name": "( )",
+          "what": "Brackets. A number next to a bracket, a constant or a root multiplies.",
+          "examples": [
+            "2(3+4)",
+            "2pi"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Roots, powers and logs",
+      "items": [
+        {
+          "name": "√x  sqrt(x)",
+          "what": "Square root.",
+          "examples": [
+            "√16",
+            "sqrt(2)"
+          ]
+        },
+        {
+          "name": "∛x  cbrt(x)",
+          "what": "Cube root; works for negative numbers.",
+          "examples": [
+            "∛27",
+            "cbrt(-8)"
+          ]
+        },
+        {
+          "name": "root(x, n)",
+          "what": "The n-th root.",
+          "examples": [
+            "root(81,4)",
+            "root(-32,5)"
+          ]
+        },
+        {
+          "name": "exp(x)",
+          "what": "e to the power x.",
+          "examples": [
+            "exp(1)"
+          ]
+        },
+        {
+          "name": "ln(x)",
+          "what": "Natural log, base e.",
+          "examples": [
+            "ln(e)",
+            "ln(10)"
+          ]
+        },
+        {
+          "name": "log(x)  log(x, b)",
+          "what": "Log base 10, or base b.",
+          "examples": [
+            "log(1000)",
+            "log(8,2)"
+          ]
+        },
+        {
+          "name": "log2(x)",
+          "what": "Log base 2.",
+          "examples": [
+            "log2(1024)"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Trigonometry",
+      "items": [
+        {
+          "name": "sin  cos  tan",
+          "what": "In degrees unless you switch to RAD.",
+          "examples": [
+            "sin(30)",
+            "cos(60)",
+            "tan(45)"
+          ]
+        },
+        {
+          "name": "sin  cos  tan (RAD)",
+          "mode": "rad",
+          "what": "In radians: the same keys after switching to RAD.",
+          "examples": [
+            "sin(pi/6)",
+            "cos(pi)"
+          ]
+        },
+        {
+          "name": "asin  acos  atan",
+          "what": "Inverse trig; answers in the current angle unit.",
+          "examples": [
+            "asin(0.5)",
+            "atan(1)"
+          ]
+        },
+        {
+          "name": "sinh  cosh  tanh  asinh  acosh  atanh",
+          "what": "Hyperbolic functions and their inverses (no angle unit).",
+          "examples": [
+            "sinh(1)",
+            "tanh(0.5)",
+            "asinh(1)"
+          ]
+        }
+      ]
+    },
+    {
+      "group": "Counting and rounding",
+      "items": [
+        {
+          "name": "nCr(n, r)",
+          "what": "Combinations: ways to choose r from n. Above 2⁵³ (about 9 × 10¹⁵) results are floating-point approximations.",
+          "examples": [
+            "nCr(52,5)"
+          ]
+        },
+        {
+          "name": "nPr(n, r)",
+          "what": "Permutations: ordered choices of r from n.",
+          "examples": [
+            "nPr(5,2)"
+          ]
+        },
+        {
+          "name": "mod(a, b)",
+          "what": "Remainder, always 0 or positive for positive b.",
+          "examples": [
+            "mod(-7,3)"
+          ]
+        },
+        {
+          "name": "abs  sign  floor  ceil  round",
+          "what": "Absolute value, sign, and rounding. round sends halves away from zero.",
+          "examples": [
+            "abs(-3.5)",
+            "floor(2.7)",
+            "round(2.5)",
+            "round(-2.5)"
+          ]
+        },
+        {
+          "name": "min  max  hypot",
+          "what": "Smallest, largest, and √(a² + b² + …).",
+          "examples": [
+            "max(1,9,4)",
+            "hypot(3,4)"
+          ]
+        }
+      ]
+    }
+  ],
+  "constants": [
+    {
+      "token": "pi",
+      "name": "π",
+      "unit": "",
+      "kind": "maths"
+    },
+    {
+      "token": "e",
+      "name": "Euler's number",
+      "unit": "",
+      "kind": "maths"
+    },
+    {
+      "token": "tau",
+      "name": "τ = 2π",
+      "unit": "",
+      "kind": "maths"
+    },
+    {
+      "token": "phi",
+      "name": "Golden ratio φ",
+      "unit": "",
+      "kind": "maths"
+    },
+    {
+      "token": "c",
+      "name": "Speed of light in vacuum",
+      "unit": "m s⁻¹",
+      "kind": "exact (SI)"
+    },
+    {
+      "token": "h",
+      "name": "Planck constant",
+      "unit": "J s",
+      "kind": "exact (SI)"
+    },
+    {
+      "token": "hbar",
+      "name": "Reduced Planck constant ħ = h/2π",
+      "unit": "J s",
+      "kind": "exact (SI)"
+    },
+    {
+      "token": "qe",
+      "name": "Elementary charge",
+      "unit": "C",
+      "kind": "exact (SI)"
+    },
+    {
+      "token": "kB",
+      "name": "Boltzmann constant",
+      "unit": "J K⁻¹",
+      "kind": "exact (SI)"
+    },
+    {
+      "token": "NA",
+      "name": "Avogadro constant",
+      "unit": "mol⁻¹",
+      "kind": "exact (SI)"
+    },
+    {
+      "token": "R",
+      "name": "Molar gas constant R = NA·kB",
+      "unit": "J mol⁻¹ K⁻¹",
+      "kind": "exact (SI)"
+    },
+    {
+      "token": "g0",
+      "name": "Standard gravity",
+      "unit": "m s⁻²",
+      "kind": "exact (defined)"
+    },
+    {
+      "token": "G",
+      "name": "Newtonian constant of gravitation",
+      "unit": "m³ kg⁻¹ s⁻²",
+      "kind": "CODATA 2018"
+    },
+    {
+      "token": "me",
+      "name": "Electron mass",
+      "unit": "kg",
+      "kind": "CODATA 2018"
+    },
+    {
+      "token": "mp",
+      "name": "Proton mass",
+      "unit": "kg",
+      "kind": "CODATA 2018"
+    }
+  ],
+  "guide": [
+    {
+      "expr": "1+2*3",
+      "why": "× comes before +."
+    },
+    {
+      "expr": "7-3-2",
+      "why": "− and ÷ go left to right."
+    },
+    {
+      "expr": "2^3^2",
+      "why": "Powers go right to left."
+    },
+    {
+      "expr": "-2^2",
+      "why": "A leading minus waits for the power."
+    },
+    {
+      "expr": "(-2)^2",
+      "why": "Brackets put the minus inside."
+    },
+    {
+      "expr": "6/2(1+2)",
+      "why": "A number next to a bracket is an ordinary ×, so it goes left to right with ÷."
+    },
+    {
+      "expr": "2pi",
+      "why": "A number next to a constant multiplies."
+    },
+    {
+      "expr": "√16+1",
+      "why": "√ takes the number right after it."
+    },
+    {
+      "expr": "3!^2",
+      "why": "! comes before ^."
+    },
+    {
+      "expr": "sin(30)",
+      "why": "Degrees: the reading shows the ° it assumed."
+    },
+    {
+      "expr": "sin(30)",
+      "mode": "rad",
+      "why": "Radians: the same keys, a different answer."
+    },
+    {
+      "expr": "0.1+0.2",
+      "why": "Shown as 0.3; the exact double is 0.30000000000000004."
+    }
+  ]
+}

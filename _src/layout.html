@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}" />
+  <meta name="theme-color" content="#262624" />
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:description" content="{{description}}" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Show Your Work calculator, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="1.5" width="26" height="29" rx="6" fill="#262624"/><rect x="7" y="5.5" width="18" height="7" rx="1.5" fill="#141513"/><circle cx="11" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="16" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="21" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="11" cy="24.5" r="2.4" fill="#F2EFE8"/><circle cx="16" cy="24.5" r="2.4" fill="#F2EFE8"/><circle cx="21" cy="24.5" r="2.4" fill="#F2B705"/></svg>
+        <span>Show Your Work<small>scientific calculator</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html"{{cur:calculator}}>Calculator</a>
+        <a href="functions.html"{{cur:functions}}>Functions</a>
+        <a href="constants.html"{{cur:constants}}>Constants</a>
+        <a href="guide.html"{{cur:guide}}>How it reads</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+{{content}}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Show Your Work</strong> · a scientific calculator that tells you how it read your maths. Answers are IEEE-754 doubles shown to 12 significant figures; the exact double is always one tap away.</p>
+      <p>Runs entirely in your browser; nothing you type leaves it. <a href="https://github.com/SolutionsAsService/ScientificCalcSite">Source and tests on GitHub</a> · MIT licensed.</p>
+    </div>
+  </footer>
+  <script src="js/calc.js"></script>
+  <script src="js/ui.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .body { fill: #262624; } .glass { fill: #141513; } .key { fill: #F2EFE8; } .eq { fill: #F2B705; }
+    @media (prefers-color-scheme: dark) { .body { fill: #E9E6DC; } .glass { fill: #55534D; } .key { fill: #262624; } }
+  </style>
+  <rect class="body" x="3" y="1.5" width="26" height="29" rx="6" />
+  <rect class="glass" x="7" y="5.5" width="18" height="7" rx="1.5" />
+  <circle class="key" cx="11" cy="18.5" r="2.4" /><circle class="key" cx="16" cy="18.5" r="2.4" /><circle class="key" cx="21" cy="18.5" r="2.4" />
+  <circle class="key" cx="11" cy="24.5" r="2.4" /><circle class="key" cx="16" cy="24.5" r="2.4" /><circle class="eq" cx="21" cy="24.5" r="2.4" />
+</svg>

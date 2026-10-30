@@ -1,0 +1,46 @@
+title: How it reads your maths · Show Your Work calculator
+description: The order of operations, angle units and rounding rules the Show Your Work calculator uses, each with a worked example and how the calculator reads it.
+nav: guide
+---
+    <section class="page-head">
+      <div class="wrap">
+        <p class="kicker">Guide</p>
+        <h1>How it reads your maths</h1>
+        <p class="lede">Calculators disagree about <code>-2^2</code> and <code>6/2(1+2)</code>. This one shows you its reading every time. Here are its rules, each with the reading and answer the calculator gave when this page was built. Characters the calculator added are marked; where another common reading gives a different number, it is shown too.</p>
+      </div>
+    </section>
+    <section class="page-body">
+      <div class="wrap">
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Worked examples">
+          <table class="data">
+            <thead><tr><th scope="col">You type</th><th scope="col">Read as</th><th scope="col">Answer</th><th scope="col">Other calculators may read</th><th scope="col">Why</th></tr></thead>
+            <tbody>
+{{guide}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="rules">
+          <section>
+            <h2>Order of operations</h2>
+            <ol>
+              <li>Brackets, and function calls like <code>sin( )</code></li>
+              <li><code>!</code> and <code>%</code> (after the number)</li>
+              <li><code>√</code> and <code>∛</code> (on the number right after them)</li>
+              <li><code>^</code>, right to left</li>
+              <li>A leading minus</li>
+              <li><code>×</code>, <code>÷</code> and a number next to a bracket or constant, left to right</li>
+              <li><code>+</code> and <code>−</code>, left to right</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Angles</h2>
+            <p>Trigonometry uses degrees until you press DEG to switch to RAD. The screen always shows which. Exact angles give exact answers: <code>sin(180)</code> is 0, and <code>tan(90)</code> is an error, not a huge number.</p>
+          </section>
+          <section>
+            <h2>Numbers and rounding</h2>
+            <p>The calculator works in 64-bit floating point, like JavaScript and most spreadsheets. It shows 12 significant figures and switches to × 10ⁿ from a trillion up and below a millionth (judged after rounding to 12 figures). When the 12 figures round the real value, a ≈ appears and the exact double is printed under the answer.</p>
+          </section>
+        </div>
+      </div>
+    </section>

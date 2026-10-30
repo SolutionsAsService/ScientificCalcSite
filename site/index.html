@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Show Your Work · a scientific calculator that shows how it read your maths</title>
+  <meta name="description" content="A free scientific calculator in the browser: trig in degrees or radians, logs, roots, powers, factorials, constants and a paper tape. Every answer comes with how it read your calculation." />
+  <meta name="theme-color" content="#262624" />
+  <meta property="og:title" content="Show Your Work · a scientific calculator that shows how it read your maths" />
+  <meta property="og:description" content="A free scientific calculator in the browser: trig in degrees or radians, logs, roots, powers, factorials, constants and a paper tape. Every answer comes with how it read your calculation." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Show Your Work calculator, home">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="1.5" width="26" height="29" rx="6" fill="#262624"/><rect x="7" y="5.5" width="18" height="7" rx="1.5" fill="#141513"/><circle cx="11" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="16" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="21" cy="18.5" r="2.4" fill="#F2EFE8"/><circle cx="11" cy="24.5" r="2.4" fill="#F2EFE8"/><circle cx="16" cy="24.5" r="2.4" fill="#F2EFE8"/><circle cx="21" cy="24.5" r="2.4" fill="#F2B705"/></svg>
+        <span>Show Your Work<small>scientific calculator</small></span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Calculator</a>
+        <a href="functions.html">Functions</a>
+        <a href="constants.html">Constants</a>
+        <a href="guide.html">How it reads</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="bench">
+      <div class="wrap bench-grid">
+        <div class="device">
+          <div class="screen">
+            <div class="screen-top">
+              <span class="flag" id="mode-flag">DEG</span>
+              <span class="flag flag-2nd" id="second-flag" hidden>2nd</span>
+            </div>
+            <label class="sr-only" for="expr">Calculation</label>
+            <input id="expr" class="expr" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sin(30) + 2^3" />
+            <p class="reading"><span class="reading-label">Read as</span> <span id="reading">—</span></p>
+            <p class="answer"><span class="approx" id="approx" hidden title="Rounded to 12 significant figures">≈</span><output id="answer" for="expr">0</output></p>
+            <p class="rival" id="rival" hidden></p>
+            <p class="detail" id="detail"></p>
+            <p class="sr-only" id="announce" aria-live="polite"></p>
+            <p class="sr-only" id="alert" role="alert"></p>
+          </div>
+
+          <div class="keys" id="keys">
+            <button type="button" class="key key-fn" data-act="second" aria-pressed="false">2nd</button>
+            <button type="button" class="key key-fn key-angle" data-act="angle" id="angle-key" aria-label="DEG, angle unit degrees. Press for radians"><b class="u-deg">DEG</b><span class="u-rad">RAD</span></button>
+            <button type="button" class="key key-fn" data-ins="(">(</button>
+            <button type="button" class="key key-fn" data-ins=")">)</button>
+            <button type="button" class="key key-fn" data-act="back" aria-label="Delete">⌫</button>
+
+            <button type="button" class="key key-fn" data-ins="sin(" data-alt="asin(" data-alt-label="sin⁻¹" data-alt-aria="inverse sine">sin</button>
+            <button type="button" class="key key-fn" data-ins="cos(" data-alt="acos(" data-alt-label="cos⁻¹" data-alt-aria="inverse cosine">cos</button>
+            <button type="button" class="key key-fn" data-ins="tan(" data-alt="atan(" data-alt-label="tan⁻¹" data-alt-aria="inverse tangent">tan</button>
+            <button type="button" class="key key-fn" data-ins="ln(" data-alt="exp(" data-alt-label="eˣ" data-alt-aria="e to the power">ln</button>
+            <button type="button" class="key key-fn" data-ins="log(" data-alt="10^" data-alt-label="10ˣ" data-alt-aria="10 to the power">log</button>
+
+            <button type="button" class="key key-fn" data-ins="^2" data-alt="^3" data-alt-label="x³" aria-label="x², squared" data-alt-aria="x³, cubed"><i>x</i>²</button>
+            <button type="button" class="key key-fn" data-ins="√" data-alt="∛" data-alt-label="∛" aria-label="square root" data-alt-aria="cube root">√</button>
+            <button type="button" class="key key-fn" data-ins="^" aria-label="to the power"><i>x</i><sup><i>y</i></sup></button>
+            <button type="button" class="key key-fn" data-ins="π" aria-label="pi">π</button>
+            <button type="button" class="key key-fn" data-ins="e" aria-label="e, Euler's number">e</button>
+
+            <button type="button" class="key" data-ins="7">7</button>
+            <button type="button" class="key" data-ins="8">8</button>
+            <button type="button" class="key" data-ins="9">9</button>
+            <button type="button" class="key key-op" data-ins="÷" aria-label="divide">÷</button>
+            <button type="button" class="key key-clear" data-act="clear" aria-label="AC, all clear">AC</button>
+
+            <button type="button" class="key" data-ins="4">4</button>
+            <button type="button" class="key" data-ins="5">5</button>
+            <button type="button" class="key" data-ins="6">6</button>
+            <button type="button" class="key key-op" data-ins="×" aria-label="times">×</button>
+            <button type="button" class="key key-op" data-ins="!" aria-label="n!, factorial">n!</button>
+
+            <button type="button" class="key" data-ins="1">1</button>
+            <button type="button" class="key" data-ins="2">2</button>
+            <button type="button" class="key" data-ins="3">3</button>
+            <button type="button" class="key key-op" data-ins="−" aria-label="minus">−</button>
+            <button type="button" class="key key-op" data-ins="Ans" aria-label="Ans, previous answer" title="Previous answer">Ans</button>
+
+            <button type="button" class="key" data-ins="0">0</button>
+            <button type="button" class="key" data-ins="." aria-label="decimal point">.</button>
+            <button type="button" class="key key-op" data-ins="E" aria-label="times 10 to the power">×10<sup><i>n</i></sup></button>
+            <button type="button" class="key key-op" data-ins="+" aria-label="plus">+</button>
+            <button type="button" class="key key-eq" data-act="eq" aria-label="equals">=</button>
+          </div>
+        </div>
+
+        <aside class="tape" aria-labelledby="tape-title">
+          <div class="tape-head">
+            <h2 id="tape-title">Tape</h2>
+            <button type="button" class="tape-clear" id="tape-clear">Clear tape</button>
+          </div>
+          <ol class="tape-roll" id="tape"></ol>
+          <p class="tape-empty" id="tape-empty">Your calculations print here. Tap one to use it again.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="explain">
+      <div class="wrap explain-grid">
+        <div>
+          <p class="kicker">Why "show your work"</p>
+          <h2>A calculator that tells you how it read you.</h2>
+        </div>
+        <ul class="points">
+          <li><strong>Read as.</strong> Every answer comes with your calculation written back with all its hidden brackets, so <code>-2^2</code> shows <code>−(2^2)</code> before it says −4. Whatever the calculator added is marked in yellow.</li>
+          <li><strong>The other reading.</strong> Where calculators genuinely disagree, like <code>6/2(1+2)</code>, the screen tells you what the other reading would give.</li>
+          <li><strong>Degrees unless you say so.</strong> The screen always shows DEG or RAD, and the reading writes the ° it assumed into every sine.</li>
+          <li><strong>The real number underneath.</strong> Answers show 12 significant figures; when that rounds, a ≈ appears and the exact double is printed below.</li>
+        </ul>
+        <p class="explain-links"><a href="functions.html">Every function, with examples</a> · <a href="constants.html">15 constants</a> · <a href="guide.html">How it reads your maths</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p><strong>Show Your Work</strong> · a scientific calculator that tells you how it read your maths. Answers are IEEE-754 doubles shown to 12 significant figures; the exact double is always one tap away.</p>
+      <p>Runs entirely in your browser; nothing you type leaves it. <a href="https://github.com/SolutionsAsService/ScientificCalcSite">Source and tests on GitHub</a> · MIT licensed.</p>
+    </div>
+  </footer>
+  <script src="js/calc.js"></script>
+  <script src="js/ui.js" defer></script>
+</body>
+</html>
