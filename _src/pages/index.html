@@ -13,10 +13,11 @@ nav: calculator
             <label class="sr-only" for="expr">Calculation</label>
             <input id="expr" class="expr" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="sin(30) + 2^3" />
             <p class="reading"><span class="reading-label">Read as</span> <span id="reading">—</span></p>
-            <p class="answer"><span class="approx" id="approx" hidden title="Rounded to 12 significant figures">≈</span><output id="answer" for="expr">0</output></p>
+            <p class="answer"><span class="approx" id="approx" hidden title="Rounded to 12 significant figures">≈</span><span id="answer" class="answer-value">0</span></p>
             <p class="rival" id="rival" hidden></p>
             <p class="detail" id="detail"></p>
             <p class="sr-only" id="announce" aria-live="polite"></p>
+            <p class="sr-only" id="echo" aria-live="polite"></p>
             <p class="sr-only" id="alert" role="alert"></p>
           </div>
 

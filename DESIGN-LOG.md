@@ -178,3 +178,11 @@ The panel's best move again came from a rival pair: Debord and Shklovsky both ob
 - In degree mode, snap sin/cos/tan at exact multiples of 90° before calling Math; in radian mode zero only near non-zero multiples of π/2, never because |result| is small.
 - Choose plain vs × 10ⁿ from the value after rounding to the display precision, or 999999999999.5 prints 13 digits.
 - Live regions that update on every keystroke are noise; announce on commit only.
+
+### Panel R2, completed after the push
+Krug PASS (withdrew the R1 "answer smallest" premise), Cairo PASS (every rival correct, no false rivals across 20 probes), Mace OBJECT (small): `<output>` is an implicit status live region; the "=" pseudo-content is voiced; key presses give no screen-reader feedback; tape label drops the reading. Holmes and Bringhurst were not re-seated (bounded run).
+
+## Move M12: Quiet until asked  (KEEP-THE-RULE)
+Depends on: M9
+Anchors: Critic: Inclusion (Mace) R2
+Intent: `#answer` becomes a plain span (no implicit live region); the "=" pseudo-content gets empty alt text (`content: "=" / ""`); each key press echoes its name in a polite region; tape entries are labelled "x = answer, read as reading. Use again". Not re-seated: Mace's confirmation is an open item.

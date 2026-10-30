@@ -8,6 +8,7 @@
   var rivalEl = document.getElementById("rival");
   var announceEl = document.getElementById("announce");
   var alertEl = document.getElementById("alert");
+  var echoEl = document.getElementById("echo");
   var answerEl = document.getElementById("answer");
   var approxEl = document.getElementById("approx");
   var detailEl = document.getElementById("detail");
@@ -72,7 +73,6 @@
     if (result.rival) {
       rivalEl.hidden = false;
       rivalEl.innerHTML = '<span class="rival-label">or</span> <span class="rival-ans">' + num(result.rival.display) + '</span> <span class="rival-label">if read</span> <span class="rival-read">' + seams(result.rival.marked) + "</span>";
-      rivalEl.setAttribute("aria-label", "Other calculators may read it as " + result.rival.reading + ", giving " + result.rival.display);
     } else rivalEl.hidden = true;
     answerEl.innerHTML = num(result.display);
     answerEl.parentElement.classList.toggle("is-long", result.display.length > 11);
@@ -166,6 +166,8 @@
     if (act === "eq") { equals(); return; }
     var text = state.second && k.dataset.alt ? k.dataset.alt : k.dataset.ins;
     insert(text);
+    // Say which key went in; aria-labels start with the visible key text, so the first part names it.
+    echoEl.textContent = (k.getAttribute("aria-label") || k.textContent).split(",")[0];
     if (state.second) setSecond(false);
   });
 
@@ -193,7 +195,7 @@
       b.querySelector(".t-x").textContent = t.x + (t.angle === "rad" ? "  (RAD)" : "");
       b.querySelector(".t-read").innerHTML = seams(t.marked || t.reading) + (t.rival ? ' <span class="t-rival">(other reading: ' + t.rival + ")</span>" : "");
       b.querySelector(".t-ans").innerHTML = "= " + (t.rounded ? "≈ " : "") + num(t.display);
-      b.setAttribute("aria-label", "Use again: " + t.x + " equals " + t.display);
+      b.setAttribute("aria-label", t.x + " = " + t.display + ", read as " + t.reading + ". Use again");
       b.addEventListener("click", function () {
         if (t.angle !== state.angle) setAngle(t.angle);
         input.value = t.x; caret.start = caret.end = t.x.length; state.fresh = false; preview();

@@ -79,15 +79,15 @@ td mark.seam, .ex-read mark.seam { color: #7A5A00; text-decoration-color: #B3860
 .reading-label { font: 600 .68rem var(--sans); letter-spacing: .12em; text-transform: uppercase; color: #8C887E; margin-right: 6px; }
 .answer { display: flex; justify-content: flex-end; align-items: baseline; gap: 8px; font: 500 clamp(2rem, 7vw, 2.6rem) var(--mono); line-height: 1.15; margin-top: 4px; overflow-wrap: anywhere; text-align: right; font-variant-numeric: tabular-nums; }
 .approx { color: var(--signal); font-size: .7em; }
-.answer output { white-space: nowrap; }
+.answer .answer-value { white-space: nowrap; }
 .answer.is-long { font-size: clamp(1.35rem, 5.4vw, 1.75rem); }
 .x { margin-inline: .18em; font-family: var(--sans); }
 sup { font-size: .62em; font-weight: 500; vertical-align: .5em; line-height: 0; }
 .key i { font-family: Georgia, "Times New Roman", serif; font-size: 1.12em; }
 .detail { font: .82rem var(--mono); color: var(--lcd-dim); text-align: right; min-height: 1.3em; overflow-wrap: anywhere; }
-.is-preview .answer output { color: #CFCBC0; }
-.is-preview .answer::before { content: "="; color: #6E6B63; font-size: .6em; margin-right: auto; }
-.answer::before { content: "="; color: var(--signal); font-size: .6em; margin-right: auto; }
+.is-preview .answer .answer-value { color: #CFCBC0; }
+.is-preview .answer::before { content: "=" / ""; color: #6E6B63; font-size: .6em; margin-right: auto; }
+.answer::before { content: "=" / ""; color: var(--signal); font-size: .6em; margin-right: auto; }
 .is-error .answer { color: #FF8A80; }
 .is-error .detail { color: #FFB4AB; }
 
